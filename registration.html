@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Multistep form- register</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<form id="regForm" action="">
+
+<h1>Register:</h1>
+
+<!-- One "tab" for each step in the form: -->
+<div class="tab">Name:
+  <p><input placeholder="First name" onblur="validateInput(this)" required autofocus="true"></p>
+  <p><input placeholder="Last name" onblur="validateInput(this)" required></p>
+</div>
+
+<div class="tab">Contact Info:
+  <p><input type="email" placeholder="E-mail" onblur="validateInput(this)" required autofocus="true"></p>
+  <p><input type="phone" placeholder="Phone" onblur="validateInput(this)" required></p>
+</div>
+
+<div class="tab">Birthday:
+  <p><input type="date" placeholder="Date of birth" onblur="validateInput(this)" required autofocus="true"></p>
+</div>
+
+<div class="tab">Login Info:
+  <p><input type="text" placeholder="Username" onblur="validateInput(this)" required autofocus="true"></p>
+  <p><input type="password" placeholder="Password" onblur="validateInput(this)" required></p>
+</div>
+
+
+  <div class="buttons">
+    <input type="button" class="pnbutton" id="prevBtn" onclick="prevTab()" value="< Previous">
+    <input type="button" class="pnbutton" id="nextBtn" onclick="nextTab()" value="Next >">
+  </div>
+
+<!-- Circles which indicates the steps of the form: -->
+<div style="text-align:center;margin-top:60px;">
+  <span class="step"></span>
+</div>
+
+</form>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
